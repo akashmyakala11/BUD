@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" href="../Styles/Homestyle.css">
+    </head>
+
+    <body>
+
+        <nav>
+
+            <button class="Know-more">Know More</button>
+            <button class="filters" onclick="showFiltersPopup()">Filters</button>
+            <div class="address" onclick="showPopup()">add property address</div>
+            <div id="overlay" class="overlay" onclick="hidePopup()"></div>
+            <input type="text" class="searchbar" placeholder="Search" onfocus="showDropdown()" onblur="hideDropdown()">
+            <button class="signup-button">Sign up</button>
+            <button class="Login-button">Login</button>
+
+            <h1 class="header1">
+                <span class="black-letter b">b</span><span class="color-letter">u</span><span class="color-letter">y</span><span class="color-letter">, </span><span class="black-letter u">u</span><span class="color-letter">n</span><span class="color-letter">v</span><span class="color-letter">e</span><span class="color-letter">i</span><span class="color-letter">l</span><span class="color-letter">, </span><span class="black-letter d">d</span><span class="color-letter">e</span><span class="color-letter">v</span><span class="color-letter">e</span><span class="color-letter">l</span><span class="color-letter">o</span><span class="color-letter">p</span>
+            </h1>
+            
+            <h4 class="header2">
+                strategic technology channel partners
+            </h4>
+
+        </nav>
+        
+        <div class="below-nav-text">
+            <p>Welcome to our platform, where we make property buying, unveiling, and development easier!</p>
+        </div>
+
+    </body>
+
+    <div id="address-popup" class="address-popup">
+        <div class="address-popup-content">
+            <span class="address-close-button" onclick="hidePopup()">&times;</span>
+            <p>Tis is your popup content!</p>
+        </div>
+    </div>
+
+    <div id="filters-popup" class="filters-popup">
+        <div class="filters-popup-content">
+            <span class="filters-close-button" onclick="hidePopup()">&times;</span>
+            <p>Filters content goes here!</p>
+        </div>
+    </div>
+
+    <ul class="search-dropdown" id="search-dropdown">
+        <li>buy Plots</li>
+        <li>buy Flats</li>
+        <li>buy Houses</li>
+        <li>buy Villas</li>
+        <li id="no-results" style="display: none;">No results found</li>
+    </ul>
+
+    <script src="../../Backend/scripts/homescript.js"></script>
+
+</html>
