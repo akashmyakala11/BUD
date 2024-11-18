@@ -1,0 +1,294 @@
+@font-face {
+    font-family: 'Arista Pro';
+    src: url('../../Fonts/zArista.ttf') format('truetype');
+}
+
+nav {
+    background-color: rgb(218, 190, 218);
+    width: 100%;
+    height: 40vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    background-image: 
+        url("../../Images/Homeicons/house1.png"),
+        url("../../Images/Homeicons/house2.png"),
+        url("../../Images/Homeicons/house3.png");
+    background-size: 20vw 15vw, 20vw 25vw, 20vw 15vw;
+    background-repeat: no-repeat;
+    background-position: 5vw 28vw, 80vw 18vw, -4vw 5vw;
+    transition: height 0.3s ease;  
+    
+}
+
+.signup-button{
+    background-color: black;
+    color: white;
+    width: 7vw;
+    height: 4vw;
+    border-radius: 1.6vw;
+    border: none;
+    position: fixed;
+    top: 3vw;
+    right: 7vw;
+    outline: 0.1vw solid black;
+    font-size: 1.3vw;
+    font-family: 'Arista pro';
+}
+
+.Login-button{
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(0, 0, 0);
+    width: 7vw;
+    height: 4vw;
+    border-radius: 1.6vw;
+    border: none;
+    position: fixed;
+    top: 3vw;
+    right: 16vw;
+    outline: 0.1vw solid black;
+    font-size: 1.3vw;
+    font-family: 'Arista pro';
+}
+
+.searchbar{
+    background-color: white;
+    color: black;
+    width: 30vw;
+    height: 3.9vw;
+    border-radius: 1.6vw;
+    border: none;
+    position: fixed;
+    top: 3vw;
+    right: 25vw;
+    outline: 0.1vw solid black;
+    padding-left: 4vw;
+    background-image: url('../../Images/Homeicons/search.png');
+    background-size: 2.6vw 1.5vw;
+    background-position: 1vw center;
+    background-repeat: no-repeat;
+    font-size: 1.3vw;
+    font-family: 'Arista pro';
+}
+
+.search-dropdown {
+    display: none;
+    position: absolute; /* Fix relative to the nearest positioned ancestor */
+    background-color: white;
+    border: 0.1vw solid black;
+    border-radius: 0.5vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    list-style: none;
+    padding: 1vw 0;
+    font-family: 'Arista Pro', sans-serif;
+    width: 30vw;
+    max-height: 20vw; /* Optional: Limit height for large lists */
+    overflow-y: auto; /* Optional: Add scroll if the list is too long */
+}
+
+.search-dropdown li {
+    padding: 0.8vw 2vw;
+    cursor: pointer;
+}
+
+.search-dropdown li:hover {
+    background-color: rgb(218, 190, 218);
+}
+
+.address{
+    background-color: transparent;
+    color: black;
+    width: 13.58vw;
+    height: 3.9vw;
+    border: none;
+    position: fixed;
+    top: 3vw;
+    left: 25vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
+    padding-left: 2vw;
+    background-image: url("../../Images/Homeicons/address.png");
+    background-size: 1.5vw 1.5vw;
+    background-repeat: no-repeat;
+    background-position: left center;
+    font-size: 1.3vw;
+    font-family: 'Arista pro';
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.address-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+    height: 20vw;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 1vw;
+    z-index: 1000;
+    padding: 1vw;
+}
+
+.address-popup-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3vw;
+    font-family: 'Arista pro';
+}
+
+.address-close-button {
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+    font-size: 2vw;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+}
+
+.filters{
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(0, 0, 0);
+    width: 7vw;
+    height: 4vw;
+    border-radius: 1.6vw;
+    border: none;
+    position: fixed;
+    top: 3vw;
+    left: 16vw;
+    outline: 0.1vw solid black;
+    font-size: 1.3vw;
+    font-family: 'Arista pro';
+}
+
+.filters-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    height: 40vw;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 1vw;
+    z-index: 1000;
+    padding: 1vw;
+}
+
+.filters-popup-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3vw;
+    font-family: 'Arista pro';
+}
+
+.filters-close-button {
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+    font-size: 2vw;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+}
+
+.Know-more{
+    background-color: black;
+    color: white;
+    width: 7vw;
+    height: 4vw;
+    border-radius: 1.6vw;
+    border: none;
+    position: fixed;
+    top: 3vw;
+    left: 7vw;
+    outline: 0.1vw solid black;
+    font-size: 1.3vw;
+    font-family: 'Arista pro';
+}
+
+.header1{
+    position: fixed;
+    top: 15vw;
+    left: 30vw;
+    font-size: 5vw;
+    font-family: 'Arista pro';
+    font-weight: 1;
+}
+
+
+.black-letter {
+    color: black;
+}
+
+.color-letter{
+    color: rgb(167, 62, 167);
+}
+
+.header2{
+    position: fixed;
+    color: black;
+    top: 21.2vw;
+    left: 33.5vw;
+    font-size: 2vw;
+    font-family: 'Arista pro';
+    font-weight: 1;
+}
+
+
+.below-nav-text {
+    margin-top: 900vw; 
+    text-align: center;
+    font-size: 1.5vw;
+    font-family: 'Arista Pro', sans-serif;
+    color: #333; 
+}
+
+
+.move-b {
+    font-size: 2vw;
+    position: relative;
+    top: -17.95vw;
+    left: -15vw;
+}
+
+.move-u {
+    font-size: 2vw;
+    position: relative;
+    top: -17.95vw;
+    left: -15vw;
+}
+
+.move-d {
+    font-size: 2vw;
+    position: relative;
+    top: -17.95vw;
+    left: -15vw;
+}
